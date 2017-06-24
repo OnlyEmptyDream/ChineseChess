@@ -1,0 +1,152 @@
+#
+# There is insufficient memory for the Java Runtime Environment to continue.
+# Native memory allocation (malloc) failed to allocate 1048576 bytes for AllocateHeap
+# Possible reasons:
+#   The system is out of physical RAM or swap space
+#   In 32 bit mode, the process size limit was hit
+# Possible solutions:
+#   Reduce memory load on the system
+#   Increase physical memory or swap space
+#   Check if swap backing store is full
+#   Use 64 bit Java on a 64 bit OS
+#   Decrease Java heap size (-Xmx/-Xms)
+#   Decrease number of Java threads
+#   Decrease Java thread stack sizes (-Xss)
+#   Set larger code cache with -XX:ReservedCodeCacheSize=
+# This output file may be truncated or incomplete.
+#
+#  Out of Memory Error (memory/allocation.inline.hpp:61), pid=12784, tid=21960
+#
+# JRE version:  (8.0_66-b17) (build )
+# Java VM: Java HotSpot(TM) 64-Bit Server VM (25.66-b17 mixed mode windows-amd64 compressed oops)
+# Failed to write core dump. Minidumps are not enabled by default on client versions of Windows
+#
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x000000000213d800):  JavaThread "Unknown thread" [_thread_in_vm, id=21960, stack(0x00000000024d0000,0x00000000025d0000)]
+
+Stack: [0x00000000024d0000,0x00000000025d0000]
+[error occurred during error reporting (printing stack bounds), id 0xc0000005]
+
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+
+
+---------------  P R O C E S S  ---------------
+
+Java Threads: ( => current thread )
+
+Other Threads:
+
+=>0x000000000213d800 (exited) JavaThread "Unknown thread" [_thread_in_vm, id=21960, stack(0x00000000024d0000,0x00000000025d0000)]
+
+VM state:not at safepoint (normal execution)
+
+VM Mutex/Monitor currently owned by a thread: None
+
+Heap:
+ PSYoungGen      total 56320K, used 972K [0x0000000781900000, 0x0000000785780000, 0x00000007c0000000)
+  eden space 48640K, 2% used [0x0000000781900000,0x00000007819f3340,0x0000000784880000)
+  from space 7680K, 0% used [0x0000000785000000,0x0000000785000000,0x0000000785780000)
+  to   space 7680K, 0% used [0x0000000784880000,0x0000000784880000,0x0000000785000000)
+ ParOldGen       total 128512K, used 0K [0x0000000704a00000, 0x000000070c780000, 0x0000000781900000)
+  object space 128512K, 0% used [0x0000000704a00000,0x0000000704a00000,0x000000070c780000)
+ Metaspace       used 767K, capacity 4480K, committed 4480K, reserved 1056768K
+  class space    used 75K, capacity 384K, committed 384K, reserved 1048576K
+
+Card table byte_map: [0x0000000011a90000,0x0000000012070000] byte_map_base: 0x000000000e26b000
+
+Marking Bits: (ParMarkBitMap*) 0x000000007674a5b0
+ Begin Bits: [0x0000000012860000, 0x0000000015738000)
+ End Bits:   [0x0000000015738000, 0x0000000018610000)
+
+Polling page: 0x0000000000450000
+
+CodeCache: size=245760Kb used=328Kb max_used=328Kb free=245431Kb
+ bounds [0x00000000026d0000, 0x0000000002940000, 0x00000000116d0000]
+ total_blobs=57 nmethods=0 adapters=37
+ compilation: enabled
+
+Compilation events (0 events):
+No events
+
+GC Heap History (0 events):
+No events
+
+Deoptimization events (0 events):
+No events
+
+Internal exceptions (0 events):
+No events
+
+Events (10 events):
+Event: 0.036 loading class java/lang/Short
+Event: 0.037 loading class java/lang/Short done
+Event: 0.037 loading class java/lang/Integer
+Event: 0.037 loading class java/lang/Integer done
+Event: 0.037 loading class java/lang/Long
+Event: 0.037 loading class java/lang/Long done
+Event: 0.037 loading class java/lang/NullPointerException
+Event: 0.037 loading class java/lang/NullPointerException done
+Event: 0.037 loading class java/lang/ArithmeticException
+Event: 0.037 loading class java/lang/ArithmeticException done
+
+
+Dynamic libraries:
+0x00007ff7b70b0000 - 0x00007ff7b70e7000 	D:\software\JAVA JAVA\MyEclipse\binary\com.sun.java.jdk8.win32.x86_64_1.8.0.u66\bin\javaw.exe
+0x00007ffc4d0d0000 - 0x00007ffc4d2a1000 	C:\WINDOWS\SYSTEM32\ntdll.dll
+0x00007ffc4a640000 - 0x00007ffc4a6eb000 	C:\WINDOWS\System32\KERNEL32.DLL
+0x00007ffc49ca0000 - 0x00007ffc49ebd000 	C:\WINDOWS\System32\KERNELBASE.dll
+0x00007ffc4c2c0000 - 0x00007ffc4c362000 	C:\WINDOWS\System32\ADVAPI32.dll
+0x00007ffc4cec0000 - 0x00007ffc4cf5e000 	C:\WINDOWS\System32\msvcrt.dll
+0x00007ffc4cf60000 - 0x00007ffc4cfb9000 	C:\WINDOWS\System32\sechost.dll
+0x00007ffc4c8d0000 - 0x00007ffc4c9f1000 	C:\WINDOWS\System32\RPCRT4.dll
+0x00007ffc4c520000 - 0x00007ffc4c685000 	C:\WINDOWS\System32\USER32.dll
+0x00007ffc495a0000 - 0x00007ffc495be000 	C:\WINDOWS\System32\win32u.dll
+0x00007ffc4cfc0000 - 0x00007ffc4cff4000 	C:\WINDOWS\System32\GDI32.dll
+0x00007ffc4a4b0000 - 0x00007ffc4a632000 	C:\WINDOWS\System32\gdi32full.dll
+0x00007ffc3f070000 - 0x00007ffc3f2ea000 	C:\WINDOWS\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.14393.953_none_42151e83c686086b\COMCTL32.dll
+0x00007ffc4aa30000 - 0x00007ffc4acf8000 	C:\WINDOWS\System32\combase.dll
+0x00007ffc49f80000 - 0x00007ffc4a075000 	C:\WINDOWS\System32\ucrtbase.dll
+0x00007ffc49f10000 - 0x00007ffc49f7a000 	C:\WINDOWS\System32\bcryptPrimitives.dll
+0x00007ffc4a8f0000 - 0x00007ffc4a91e000 	C:\WINDOWS\System32\IMM32.DLL
+0x00000000767d0000 - 0x00000000768a2000 	D:\software\JAVA JAVA\MyEclipse\binary\com.sun.java.jdk8.win32.x86_64_1.8.0.u66\jre\bin\msvcr100.dll
+0x0000000075f40000 - 0x00000000767c9000 	D:\software\JAVA JAVA\MyEclipse\binary\com.sun.java.jdk8.win32.x86_64_1.8.0.u66\jre\bin\server\jvm.dll
+0x00007ffc4c2b0000 - 0x00007ffc4c2b8000 	C:\WINDOWS\System32\PSAPI.DLL
+0x00007ffc456a0000 - 0x00007ffc456a9000 	C:\WINDOWS\SYSTEM32\WSOCK32.dll
+0x00007ffc4ce30000 - 0x00007ffc4ce9a000 	C:\WINDOWS\System32\WS2_32.dll
+0x00007ffc479c0000 - 0x00007ffc479e3000 	C:\WINDOWS\SYSTEM32\WINMM.dll
+0x00007ffc482c0000 - 0x00007ffc482ca000 	C:\WINDOWS\SYSTEM32\VERSION.dll
+0x00007ffc478f0000 - 0x00007ffc4791b000 	C:\WINDOWS\SYSTEM32\WINMMBASE.dll
+0x00007ffc49ec0000 - 0x00007ffc49f02000 	C:\WINDOWS\System32\cfgmgr32.dll
+0x0000000076c10000 - 0x0000000076c1f000 	D:\software\JAVA JAVA\MyEclipse\binary\com.sun.java.jdk8.win32.x86_64_1.8.0.u66\jre\bin\verify.dll
+0x0000000076be0000 - 0x0000000076c09000 	D:\software\JAVA JAVA\MyEclipse\binary\com.sun.java.jdk8.win32.x86_64_1.8.0.u66\jre\bin\java.dll
+0x0000000076bc0000 - 0x0000000076bd6000 	D:\software\JAVA JAVA\MyEclipse\binary\com.sun.java.jdk8.win32.x86_64_1.8.0.u66\jre\bin\zip.dll
+
+VM Arguments:
+jvm_args: -Dfile.encoding=GBK 
+java_command: Chess.Chess
+java_class_path (initial): D:\software\JAVA JAVA\WorkSpace\ChineseChess\bin
+Launcher Type: SUN_STANDARD
+
+Environment Variables:
+PATH=C:\Program Files\Microsoft MPI\Bin\;D:\software\JAVA JAVA\JDK\bin;%C:\ProgramData\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\system32\config\systemprofile\.dnx\bin;C:\Program Files\Microsoft DNX\Dnvm\;C:\Program Files (x86)\Windows Kits\8.1\Windows Performance Toolkit\;C:\Program Files (x86)\Microsoft SQL Server\Client SDK\ODBC\130\Tools\Binn\;C:\Program Files (x86)\Microsoft SQL Server\130\Tools\Binn\;C:\Program Files (x86)\Microsoft SQL Server\130\DTS\Binn\;C:\Program Files (x86)\Microsoft SQL Server\130\Tools\Binn\ManagementStudio\;C:\Program Files\Microsoft SQL Server\130\Tools\Binn\;C:\Program Files\Microsoft SQL Server\130\DTS\Binn\;C:\Program Files\Microsoft SQL Server\Client SDK\ODBC\130\Tools\Binn\;D:\software\MonoDevelop;C:\Users\Administrator\AppData\Local\Microsoft\WindowsApps;
+USERNAME=Administrator
+OS=Windows_NT
+PROCESSOR_IDENTIFIER=Intel64 Family 6 Model 78 Stepping 3, GenuineIntel
+
+
+
+---------------  S Y S T E M  ---------------
+
+OS: Windows 10.0 , 64 bit Build 14393 (10.0.14393.0)
+
+CPU:total 4 (2 cores per cpu, 2 threads per core) family 6 model 78 stepping 3, cmov, cx8, fxsr, mmx, sse, sse2, sse3, ssse3, sse4.1, sse4.2, popcnt, avx, avx2, aes, clmul, erms, 3dnowpref, lzcnt, ht, tsc, tscinvbit, bmi1, bmi2, adx
+
+Memory: 4k page, physical 12277256k(5218164k free), swap 42361624k(5724k free)
+
+vm_info: Java HotSpot(TM) 64-Bit Server VM (25.66-b17) for windows-amd64 JRE (1.8.0_66-b17), built on Oct  6 2015 18:55:33 by "java_re" with MS VC++ 10.0 (VS2010)
+
+time: Sat Apr 22 21:00:16 2017
+elapsed time: 0 seconds (0d 0h 0m 0s)
+
